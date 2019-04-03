@@ -18,6 +18,10 @@ def send_welcome(message):
 @bot.message_handler(commands=['Instagram'])
 def send_welcome(message):
     bot.reply_to(message,'Enter username with id @')
+    
+@bot.message_handler(commands=['repo'])
+def send_welcome(message):
+    bot.reply_to(message,'https://github.com/Bisht13/GCI-Trip-A-2k18-Telegram-Bot')
 
 @bot.message_handler(func= lambda msg: msg.text is not None and '@' in msg.text and 'id' in msg.text)
 def at_answer(message):
