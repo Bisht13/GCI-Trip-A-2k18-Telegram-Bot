@@ -50,7 +50,7 @@ def reset_IDs():
 
 @bot.message_handler(commands=['InstaAdd'])
 def reply_to_add_ID(message):
-    bot.reply_to(message,'To add your ID to /Insta list. Please write in the format given below \n !Yourname @YourID')
+    bot.reply_to(message,'To add your ID to /InstaList. Please write in the format given below \n !Yourname @YourID')
 
 @bot.message_handler(func= lambda msg: msg.text is not None and '!' in msg.text and '@' in msg.text)
 def add_ID(message):
@@ -61,7 +61,7 @@ def add_ID(message):
     instaIDs.write(name + '   @' + id + '\n')
     bot.reply_to(message, 'Your ID has been add :D')
 
-@bot.message_handler(commands=['InstaIDs'])
+@bot.message_handler(commands=['InstaList'])
 def send_insta_ids(message):
     instaID = open('instaIDs.txt','r')
     if instaID.mode == 'r':
