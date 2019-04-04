@@ -6,6 +6,8 @@ import os
 
 bot = telebot.TeleBot(token=os.environ['SUPERIOR_TELEGRAM_BOT_API'])
 
+instaIDs= open("instaIDs.txt","w+")
+
 def find_at(msg):
     for text in msg:
         if '@' in text:
