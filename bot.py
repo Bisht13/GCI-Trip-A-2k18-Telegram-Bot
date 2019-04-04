@@ -28,7 +28,7 @@ def send_Instagram_Message(message):
 def send_Repo_URL(message):
     bot.reply_to(message,'https://github.com/Bisht13/GCI-Trip-A-2k18-Telegram-Bot')
 
-@bot.message_handler(func= lambda msg: msg.text is not None and '@' in msg.text and 'id' in msg.text)
+@bot.message_handler(func= lambda msg: msg.text is not None and '@' in msg.text and 'id ' in msg.text)
 def send_Instgram_ID(message):
     texts = message.text.split()
     id = find_at(texts)
