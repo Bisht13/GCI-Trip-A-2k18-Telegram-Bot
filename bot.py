@@ -61,7 +61,7 @@ def add_ID(message):
     id = find_at(texts)[1:]
     instaIDs = open('instaIDs.txt','a+')
     instaIDs.write(name + '   @' + id + '\n')
-    bot.reply_to(message, 'Your ID has been add :D')
+    bot.reply_to(message, 'Your ID has been added :D')
 
 @bot.message_handler(commands=['InstaList'])
 def send_insta_ids(message):
